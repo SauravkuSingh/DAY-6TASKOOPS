@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Person class to hold details
+      class Person {
+        constructor(name, age, email) {
+          this.name = name;
+          this.age = age;
+          this.email = email;
+        }
+
+        introduce() {
+          console.log(`Hi, I'm ${this.name}, and I'm ${this.age} years old.`);
+        }
+
+        contact() {
+          console.log(`You can reach me at ${this.email}`);
+        }
+      }
+
+      // Create an instance of the Person class
+      const person1 = new Person("John Doe", 30, "john@example.com");
+
+      // Access and use the class methods and properties
+      person1.introduce(); // Output: Hi, I'm John Doe, and I'm 30 years old.
+      person1.contact(); // Output: You can reach me at john@example.com
+      console.log(`${person1 instanceof Object}`); // true - The object is a JavaScript object (not a string or number).
+
+      // Class to calculate Uber Price
+
+      class UberPrice {
+        constructor(baseprice, Priceperkm, Surgecharge) {
+          (this.baseprice = baseprice),
+            (this.Priceperkm = Priceperkm),
+            (this.Surgecharge = Surgecharge);
+        }
+
+        getPrice(distance) {
+          var total_price =
+            this.baseprice + this.Surgecharge + this.Priceperkm * distance;
+          console.log(total_price);
+        }
+      }
+
+      var p1 = new UberPrice(30, 15, 40);
+
+      p1.getPrice(5);
+    </script>
+  </body>
+</html>
